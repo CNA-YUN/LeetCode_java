@@ -5,10 +5,10 @@ import static java.lang.Math.min;
 
 public class Main {
     public static void main(String[] args) {
-//        Solution2144 solution2144 = new Solution2144();
-//        int[] cost = {10,5,9,4,1,9,10,2,10,8};
-//        int result = solution2144.minimumCost(cost);
+        Solution2529 solution = new Solution2529();
+        int[] nums = new int[]{0,0};
+        int res=solution.maximumCount(nums);
 
-        System.out.println(10e4);
+        System.out.println(res);
     }
 }
