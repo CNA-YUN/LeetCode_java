@@ -9,9 +9,10 @@ import static java.lang.Math.min;
 
 public class Main {
     public static void main(String[] args) {
-        Solution3488 solution = new Solution3488();
-        int[] nums = {1,3,1,4,1,3,2}, queries = {0,3,5};
-        List<Integer> list = solution.solveQueries(nums, queries);
-        System.out.println(list);
+        SolutionLCP08 solution = new SolutionLCP08();
+        int[][] increase = {{2,8,4},{2,5,0},{10,9,8}};
+        int[][] requirements = {{2,11,3},{15,10,7},{9,17,12},{8,1,14}};
+        int[] res =  solution.getTriggerTime(increase, requirements);
+        System.out.println(Arrays.toString(res));
     }
 }
