@@ -9,8 +9,10 @@ import static java.lang.Math.min;
 
 public class Main {
     public static void main(String[] args) {
-        Solution2476 solution = new Solution2476();
-        TreeNode root = new TreeNode();
+        Solution1011 solution = new Solution1011();
+        int[] weights = new int[]{3,3,3,3,3,3};
+        int days = 2;
+        System.out.println(solution.shipWithinDays(weights, days));
 
 
 //        System.out.println(solution.closestNodes(root,queries));
