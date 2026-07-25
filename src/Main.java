@@ -9,10 +9,10 @@ import static java.lang.Math.min;
 
 public class Main {
     public static void main(String[] args) {
-        Solution1011 solution = new Solution1011();
+        Solution3536 solution = new Solution3536();
         int[] weights = new int[]{3,3,3,3,3,3};
-        int days = 2;
-        System.out.println(solution.shipWithinDays(weights, days));
+        int n = 256;
+        System.out.println(solution.maxProduct(n));
 
 
 //        System.out.println(solution.closestNodes(root,queries));
