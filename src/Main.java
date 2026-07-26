@@ -9,10 +9,10 @@ import static java.lang.Math.min;
 
 public class Main {
     public static void main(String[] args) {
-        Solution875 solution = new Solution875();
-        int[] weights = new int[]{805306368,805306368,805306368};
+        Solution628 solution = new Solution628();
+        int[] weights = new int[]{-1,-2,-3};
         int n = 1000000000;
-        System.out.println(solution.minEatingSpeed(weights, n));
+        System.out.println(solution.maximumProduct(weights));
 
 
 //        System.out.println(solution.closestNodes(root,queries));
