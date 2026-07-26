@@ -19,8 +19,6 @@ public class Solution628 {
                 mx3 = x;
             }
         }
-        int a = mn1 * mn2 * mx1, b = mn1 * mx2 * mx1, c = mx3 * mx2 * mx1;
-        int res1 = Math.max(a, b);
-        return Math.max(res1, c);
+        return Math.max(Math.max(mn1 * mn2 * mx1, mn1 * mx2 * mx1), mx3 * mx2 * mx1);
     }
 }
