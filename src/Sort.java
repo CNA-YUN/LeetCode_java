@@ -1,13 +1,13 @@
 import java.util.Random;
 
-public class QuickSort {
+public class Sort {
     private final Random random = new Random();
 
-    public void quicksort(int[] nums, int left, int right) {
+    public void quickSort(int[] nums, int left, int right) {
         if (left < right) {
             int pivot = partition(nums, left, right);
-            quicksort(nums, left, pivot - 1);
-            quicksort(nums, pivot + 1, right);
+            quickSort(nums, left, pivot - 1);
+            quickSort(nums, pivot + 1, right);
         }
     }
 
@@ -39,4 +39,5 @@ public class QuickSort {
         swap(nums, left, j);
         return j;
     }
+
 }
