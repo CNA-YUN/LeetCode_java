@@ -1,6 +1,4 @@
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -41,7 +39,7 @@ public class Solution2476 {
 
     private int lowerBound(List<Integer> nums, int target) {
         /*
-          return: nums 数组中 >= target 的元素的最小下标
+         * return: nums 数组中 >= target 的元素的最小下标
          */
         int n = nums.size();
         int left = 0;
@@ -59,7 +57,7 @@ public class Solution2476 {
 
     private int higherBound(List<Integer> nums, int target) {
         /*
-          return: nums 数组中 <= target 的元素的最大下标
+         * return: nums 数组中 <= target 的元素的最大下标
          */
         int n = nums.size();
         int left = 0;
@@ -77,8 +75,8 @@ public class Solution2476 {
 
     private void inOrder(TreeNode root) {
         /*
-         中序遍历
-        */
+         * 中序遍历
+         */
         if (root == null) {
             return;
         }

@@ -1,6 +1,6 @@
 public class Solution1011 {
     public int shipWithinDays(int[] weights, int days) {
-        int n = weights.length;
+
         long low = weights[0], high;
         long sum = 0;
         for (int w : weights) {
