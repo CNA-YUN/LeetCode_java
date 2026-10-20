@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class Solution2300 {
     public int[] successfulPairs(int[] spells, int[] potions, long success) {
         int n = spells.length;
-        int m = potions.length;
         int[] pairs = new int[n];
         Arrays.sort(potions);
         for (int i = 0; i < n; i++) {

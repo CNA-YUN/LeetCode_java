@@ -12,7 +12,7 @@ public class Solution1248 {
         /*
           计算数组 nums 中 奇数个数 >= k 的子数组数目
          */
-        int n = nums.length;
+
         int ans = 0;
         int left = 0;
         int count = 0;

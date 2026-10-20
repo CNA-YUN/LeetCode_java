@@ -1,6 +1,3 @@
-import java.util.Arrays;
-
-
 public class SolutionLCP08 {
     public int[] getTriggerTime(int[][] increase, int[][] requirements) {
         int n = increase.length;
@@ -26,8 +23,8 @@ public class SolutionLCP08 {
 
     private int lowerBound(int[] arr, int target) {
         /*
-        arr 非递减
-        return: >= target 的最小元素下标
+         * arr 非递减
+         * return: >= target 的最小元素下标
          */
         int low = 0;
         int high = arr.length - 1;

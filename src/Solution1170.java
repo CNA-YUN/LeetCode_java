@@ -37,7 +37,7 @@ public class Solution1170 {
 
     public int countminLetter(String s) {
         int n = s.length();
-        int count = 0;
+
         int[] counts = new int[26];
         for (int i = 0; i < n; i++) {
             counts[s.charAt(i) - 'a']++;

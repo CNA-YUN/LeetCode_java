@@ -5,9 +5,7 @@ public class Solution3754 {
     public long sumAndMultiply(int n) {
         List<Integer> nums = new ArrayList<>();
         int num = n;
-        int cnt = 0;
         while (num > 0) {
-            cnt++;
             nums.add(num%10);
             num /= 10;
         }

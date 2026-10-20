@@ -6,7 +6,7 @@ public class Solution131 {
     public List<String> path = new ArrayList<>();
 
     public List<List<String>> partition(String s) {
-        int n = s.length();
+
         dfs(0, s);
         return res;
     }

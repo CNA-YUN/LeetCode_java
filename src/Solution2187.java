@@ -1,7 +1,6 @@
 public class Solution2187 {
     public long minimumTime(int[] time, int totalTrips) {
         long high = time[0];
-        int n = time.length;
         for (int t : time) {
             high = Math.min(high, t);
         }

@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-
 public class Solution3536 {
     public int maxProduct(int n) {
         int mx1 = 0, mx2 = 0;

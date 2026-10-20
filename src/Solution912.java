@@ -1,7 +1,7 @@
-import java.util.Random;
+
 
 public class Solution912 {
-    private final Random random = new Random();
+    
 
     public int[] sortArray(int[] nums) {
         Sort sort = new Sort();

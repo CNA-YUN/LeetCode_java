@@ -1,6 +1,6 @@
 public class Solution287 {
     public int findDuplicate(int[] nums) {
-        int n = nums.length;
+
         int slow = nums[0];
         int fast = nums[nums[0]];
         while (slow != fast) {
