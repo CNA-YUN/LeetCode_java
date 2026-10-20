@@ -11,7 +11,6 @@ class Solution3886 {
                 list.add(i);
                 if (i != n / i)
                     list.add(n / i);
-
             }
         }
         int res = 0;
@@ -21,7 +20,6 @@ class Solution3886 {
             }
         }
         return res;
-
     }
 
     private boolean check(int[] nums, int k) {
