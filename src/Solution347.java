@@ -40,7 +40,7 @@ class Solution347 {
         }
         int id = k - 1;
         int[] res = new int[k];
-        for (int i = n - 1; i > 0; i++) {
+        for (int i = n; i > 0; i--) {
             List<Integer> list = buckets[i];
             if (list == null)
                 continue; // 跳过空桶
