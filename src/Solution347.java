@@ -10,7 +10,8 @@ class Solution347 {
         for (int x : nums) {
             cnt.put(x, cnt.getOrDefault(x, 0) + 1);
         }
-        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> a.getValue() - b.getValue());
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(
+                (a, b) -> Integer.compare(a.getValue(), b.getValue()));
         for (Map.Entry<Integer, Integer> e : cnt.entrySet()) {
             pq.offer(e);
             if (pq.size() > k) {
@@ -30,18 +31,17 @@ class Solution347 {
         for (int x : nums) {
             cnt.put(x, cnt.getOrDefault(x, 0) + 1);
         }
-        List<Integer>[] buckets = new List[nums.length + 1];
+        Map<Integer, List<Integer>> bucketMap = new HashMap<>();
         for (Map.Entry<Integer, Integer> e : cnt.entrySet()) {
             int freq = e.getValue();
-            if (buckets[freq] == null) {// 先建桶
-                buckets[freq] = new ArrayList<>();
-            }
-            buckets[freq].add(e.getKey());
+            bucketMap.computeIfAbsent(freq, key -> new ArrayList<>()).add(e.getKey());
+
         }
         int id = k - 1;
         int[] res = new int[k];
         for (int i = n; i > 0; i--) {
-            List<Integer> list = buckets[i];
+            List<Integer> list = bucketMap.get(i);
+
             if (list == null)
                 continue; // 跳过空桶
             for (int num : list) { // 直接遍历
@@ -49,6 +49,8 @@ class Solution347 {
                     break;
                 res[id--] = num;
             }
+            if (id < 0)
+                break; // 已凑齐 k 个，提前结束，避免无谓遍历剩余桶
         }
         return res;
     }
