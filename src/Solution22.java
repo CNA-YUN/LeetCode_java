@@ -1,23 +1,30 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution22 {
+class Solution22 {
+    List<String> ans = new ArrayList<>();
+    StringBuilder sb = new StringBuilder();
+
     public List<String> generateParenthesis(int n) {
-        List<String> res = new ArrayList<>();
-        dfs(res, "", 0, 0, n);
-        return res;
+        int left = n, right = n;
+        dfs(left, right);
+        return ans;
     }
 
-    private void dfs(List<String> res, String s, int i, int i1, int n) {
-        if (i == n && i1 == n) {
-            res.add(s);
+    private void dfs(int left, int right) {
+        if (left == 0 && right == 0) {
+            ans.add(sb.toString());
             return;
         }
-        if (i < n) {
-            dfs(res, s + "(", i + 1, i1, n);
+        if (left > 0) {
+            sb.append('(');
+            dfs(left - 1, right);
+            sb.deleteCharAt(sb.length() - 1);
         }
-        if (i1 < i) {
-            dfs(res, s + ")", i, i1 + 1, n);
+        if (right > left) {
+            sb.append(')');
+            dfs(left, right - 1);
+            sb.deleteCharAt(sb.length() - 1);
         }
     }
 }
